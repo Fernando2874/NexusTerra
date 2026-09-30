@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTerra - Agricultura Regenerativa Urbana con IA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nexusGreen: '#1b4332',      /* Color principal: Verde bosque profundo */
+                        nexusMint: '#d8f3dc',       /* Color secundario: Verde menta claro */
+                        nexusLight: '#f8f9fa',      /* Color de fondo y limpieza */
+                        nexusDarkText: '#081c15'    /* Texto oscuro de alta legibilidad */
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #081c15;
+        }
+    </style>
+</head>
+<body class="bg-nexusLight text-nexusDarkText antialiased flex flex-col min-h-screen">
+
+    <!-- Encabezado (Header) -->
+    <header class="sticky top-0 z-50 bg-nexusGreen text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo y Nombre de Empresa -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-nexusMint flex items-center justify-center text-nexusGreen font-bold text-xl shadow-inner group-hover:scale-105 transition-transform">
+                    🌱
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold tracking-tight">NexusTerra</span>
+                    <p class="text-xs text-nexusMint font-light hidden sm:block">Cultivando el futuro urbano con inteligencia</p>
+                </div>
+            </a>
+
+            <!-- Navegación de Escritorio -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-nexusMint transition-colors">Inicio</a>
+                <a href="#innovacion" class="hover:text-nexusMint transition-colors">Innovación</a>
+                <a href="#proyectos" class="hover:text-nexusMint transition-colors">Proyectos</a>
+                <a href="#tecnologia" class="hover:text-nexusMint transition-colors">Tecnología</a>
+                <a href="#contacto" class="bg-nexusMint text-nexusGreen px-4 py-2 rounded-lg font-semibold hover:bg-white transition-all shadow-sm">Contacto</a>
+            </nav>
+
+            <!-- Botón Menú Móvil -->
+            <button id="menu-btn" class="md:hidden text-nexusMint focus:outline-none p-2 rounded-lg hover:bg-nexusGreen/80 transition-colors" aria-label="Abrir menú">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-nexusGreen border-t border-nexusGreen/40 px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Inicio</a>
+            <a href="#innovacion" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Innovación</a>
+            <a href="#proyectos" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Proyectos</a>
+            <a href="#tecnologia" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Tecnología</a>
+            <a href="#contacto" class="block py-2 px-3 rounded bg-nexusMint text-nexusGreen font-semibold text-center">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Cuerpo (Home / Página de inicio) -->
+    <main class="flex-grow">
+        
+        <!-- Sección Hero -->
+        <section id="inicio" class="relative bg-gradient-to-b from-nexusGreen to-[#133124] text-white py-20 lg:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <span class="inline-block bg-nexusMint/20 text-nexusMint text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-nexusMint/30">
+                    🚀 Startup de Agricultura Regenerativa e Inteligencia Artificial
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Reinventando el campo <span class="text-nexusMint">dentro de la ciudad</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                    Integramos sensores IoT avanzados, aprendizaje automático y diseño regenerativo para transformar techos y espacios grises en ecosistemas agrícolas hiperproductivos y sostenibles.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#proyectos" class="bg-nexusMint text-nexusGreen font-semibold px-8 py-3.5 rounded-xl hover:bg-white transition-all shadow-lg transform hover:-translate-y-0.5">
+                        Explorar Proyectos
+                    </a>
+                    <a href="#contacto" class="border-2 border-nexusMint text-nexusMint hover:bg-nexusMint hover:text-nexusGreen font-semibold px-8 py-3.5 rounded-xl transition-all">
+                        Unirme al Movimiento
+                    </a>
+                </div>
+            </div>
+            <!-- Elemento decorativo sutil de fondo -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d8f3dc_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </section>
+
+        <!-- Sección de Innovación (Multimedia: Video simulado y galería) -->
+        <section id="innovacion" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-nexusGreen mb-4">La Innovación Detrás de NexusTerra</h2>
+                <p class="text-gray-600 text-base sm:text-lg">Descubre cómo convertimos datos climáticos en cosechas abundantes con mínima huella hídrica y cero pesticidas sintéticos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Tarjeta de Video Incrustado / Reproductor simulado de alta calidad -->
+                <div class="bg-nexusGreen rounded-2xl overflow-hidden shadow-xl aspect-video relative flex flex-col items-center justify-center p-6 text-center group">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                    <!-- Simulación de reproductor -->
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-nexusMint rounded-full flex items-center justify-center text-nexusGreen text-2xl shadow-lg mb-4 cursor-pointer hover:scale-110 transition-transform">
+                            ▶
+                        </div>
+                        <h3 class="text-white font-bold text-lg">NexusAI en Acción: Microclimas Urbanos</h3>
+                        <p class="text-nexusMint text-sm mt-1">Video demostrativo de optimización autónoma de riego</p>
+                    </div>
+                </div>
+
+                <!-- Galería de Imágenes Limpias -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-xl overflow-hidden shadow-md h-48 bg-nexusMint/20 border border-nexusMint/30 flex items-center justify-center relative">
+                            <img src="https://placehold.co/400x300/1b4332/d8f3dc?text=Sensores+IoT" alt="Sensores IoT en cultivos urbanos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1b4332/ffffff?text=NexusTerra+IoT'">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-36 bg-nexusMint/20 border border-nexusMint/30 flex items-center justify-center relative">
+                            <img src="https://placehold.co/400x300/1b4332/d8f3dc?text=Techos+Verdes" alt="Techos verdes regenerativos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1b4332/ffffff?text=Techos+Verdes'">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="rounded-xl overflow-hidden shadow-md h-36 bg-nexusMint/20 border border-nexusMint/30 flex items-center justify-center relative">
+                            <img src="https://placehold.co/400x300/1b4332/d8f3dc?text=Monitoreo+IA" alt="Monitoreo por Inteligencia Artificial" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1b4332/ffffff?text=IA+Predictiva'">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-48 bg-nexusMint/20 border border-nexusMint/30 flex items-center justify-center relative">
+                            <img src="https://placehold.co/400x300/1b4332/d8f3dc?text=Cosecha+Urbana" alt="Cosecha urbana sostenible" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1b4332/ffffff?text=Cosecha+Local'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de Características del Proyecto Final -->
+        <section id="proyectos" class="bg-nexusMint/30 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-nexusGreen font-semibold text-sm uppercase tracking-wider">Proyecto Destacado</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-nexusGreen mt-1 mb-4">Pilares Tecnológicos de NexusTerra</h2>
+                    <p class="text-gray-700 text-base sm:text-lg">Nuestro sistema combina hardware de bajo consumo y software en la nube para garantizar el éxito biológico en entornos altamente densificados.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Tarjeta 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                                📡
+                            </div>
+                            <h3 class="text-xl font-bold text-nexusGreen mb-3">Sensores IoT Autónomos</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Red de nodos autónomos que miden humedad del sustrato, radiación UV, temperatura ambiente y concentración de nutrientes en tiempo real cada 60 segundos.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-semibold text-nexusGreen">
+                            <span>Precisión de medición &gt; 99%</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                                🧠
+                            </div>
+                            <h3 class="text-xl font-bold text-nexusGreen mb-3">Algoritmos Predictivos IA</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Modelos de redes neuronales entrenados para anticipar olas de calor, requerimientos hídricos específicos por variedad y prevenir plagas de manera biológica.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-semibold text-nexusGreen">
+                            <span>Ahorro de agua del 74%</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                                🏙️
+                            </div>
+                            <h3 class="text-xl font-bold text-nexusGreen mb-3">Impacto Regenerativo Urbano</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Mitigación del efecto "isla de calor" en las ciudades, secuestro activo de carbono y creación de corredores ecológicos polinizadores en azoteas desaprovechadas.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-semibold text-nexusGreen">
+                            <span>Sostenibilidad Certificada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Tecnología e Infraestructura -->
+        <section id="tecnologia" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-nexusGreen text-white rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl">
+                <div class="lg:w-1/2">
+                    <span class="bg-nexusMint/20 text-nexusMint text-xs font-semibold px-3 py-1 rounded-full border border-nexusMint/30">
+                        Infraestructura Abierta
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-6">Escalando la soberanía alimentaria local</h2>
+                    <p class="text-gray-200 text-base mb-6 leading-relaxed">
+                        Nuestra arquitectura de software permite la gestión remota de múltiples granjas urbanas simultáneamente desde un panel centralizado en la nube, facilitando la participación ciudadana y cooperativas locales.
+                    </p>
+                    <ul class="space-y-3 text-sm text-nexusMint font-medium">
+                        <li class="flex items-center space-x-2">
+                            <span>✓</span> <span>Monitoreo 24/7 mediante aplicación web responsiva</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span>✓</span> <span>Automatización de sistemas de riego por goteo solar</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span>✓</span> <span>Reportes de huella de carbono e impacto hídrico en tiempo real</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 w-full flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 w-full max-w-md text-center">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Panel de Control en Vivo</h3>
+                        <p class="text-gray-300 text-sm mb-6">Estado óptimo de microclimas urbanos conectados a nuestra red central.</p>
+                        <div class="grid grid-cols-2 gap-4 text-left">
+                            <div class="bg-nexusGreen/80 p-3 rounded-xl border border-nexusMint/30">
+                                <span class="text-xs text-nexusMint block">Humedad Suelo</span>
+                                <span class="text-lg font-bold text-white">68.4%</span>
+                            </div>
+                            <div class="bg-nexusGreen/80 p-3 rounded-xl border border-nexusMint/30">
+                                <span class="text-xs text-nexusMint block">Ahorro Hídrico</span>
+                                <span class="text-lg font-bold text-white">-74.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-nexusGreen mb-3">Únete a la Revolución Verde</h2>
+                <p class="text-gray-600">¿Tienes una azotea o espacio urbano y deseas transformarlo? Escríbenos.</p>
+            </div>
+            <form onsubmit="handleContact(event)" class="bg-white p-8 sm:p-10 rounded-2xl shadow-md border border-nexusMint/50 space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-nexusGreen mb-2">Nombre completo</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nexusGreen text-sm" placeholder="Ej. María González">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-nexusGreen mb-2">Correo electrónico</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nexusGreen text-sm" placeholder="maria@ejemplo.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-nexusGreen mb-2">Mensaje o propuesta de proyecto</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nexusGreen text-sm" placeholder="Cuéntanos sobre tu espacio o iniciativa..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-nexusGreen text-nexusMint font-bold py-3.5 rounded-xl hover:bg-[#133124] transition-colors shadow-md">
+                    Enviar Mensaje
+                </button>
+            </form>
+            <!-- Cuadro de mensaje personalizado sin usar alert() -->
+            <div id="form-success" class="hidden mt-4 p-4 bg-nexusMint text-nexusGreen rounded-xl text-center font-medium shadow-sm">
+                ¡Gracias por contactar a NexusTerra! Nos pondremos en contacto contigo muy pronto.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-nexusGreen text-white border-t border-nexusGreen/50 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-lg font-bold">🌱 NexusTerra</span>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    Transformando espacios urbanos en centros de producción agrícola regenerativa mediante inteligencia artificial y monitoreo IoT.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold text-nexusMint uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="#inicio" class="hover:text-nexusMint transition-colors">Inicio</a></li>
+                    <li><a href="#innovacion" class="hover:text-nexusMint transition-colors">Innovación</a></li>
+                    <li><a href="#proyectos" class="hover:text-nexusMint transition-colors">Proyectos</a></li>
+                    <li><a href="#tecnologia" class="hover:text-nexusMint transition-colors">Tecnología</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold text-nexusMint uppercase tracking-wider mb-4">Redes Sociales</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-nexusMint hover:text-nexusGreen rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">in</a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-nexusMint hover:text-nexusGreen rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">tw</a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-nexusMint hover:text-nexusGreen rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">ig</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold text-nexusMint uppercase tracking-wider mb-4">Aviso Legal</h4>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    © 2026 NexusTerra Inc. Todos los derechos reservados. <br>
+                    <a href="#" class="text-nexusMint underline hover:text-white">Aviso de Privacidad</a> y Términos de Servicio.
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-gray-400">
+            Diseñado con un enfoque innovador, responsivo y de triple paleta de color para servidores en la nube.
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad para el menú móvil responsivo
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer click en un enlace
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simulación de envío de formulario sin usar alert()
+        function handleContact(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('form-success');
+            successBox.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
