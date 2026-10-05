@@ -1,0 +1,12 @@
+{
+  "name": "NexusTerra",
+  "short_name": "NexusTerra",
+  "description": "Agricultura regenerativa urbana con inteligencia artificial.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1b4332",
+  "orientation": "portrait",
+  "lang": "es-MX"
+}
