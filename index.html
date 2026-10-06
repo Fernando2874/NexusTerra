@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusTerra - Agricultura Regenerativa Urbana con IA</title>
+    
+    <!-- PWA Meta tags e Íconos -->
     <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="apple-touch-icon" href="./icon.png">
     <meta name="theme-color" content="#1b4332">
 
     <!-- Tailwind CSS CDN -->
@@ -14,10 +18,10 @@
             theme: {
                 extend: {
                     colors: {
-                        nexusGreen: '#1b4332',      /* Color principal: Verde bosque profundo */
-                        nexusMint: '#d8f3dc',       /* Color secundario: Verde menta claro */
-                        nexusLight: '#f8f9fa',      /* Color de fondo y limpieza */
-                        nexusDarkText: '#081c15'    /* Texto oscuro de alta legibilidad */
+                        nexusGreen: '#1b4332',
+                        nexusMint: '#d8f3dc',
+                        nexusLight: '#f8f9fa',
+                        nexusDarkText: '#081c15'
                     }
                 }
             }
@@ -38,7 +42,6 @@
     <header class="sticky top-0 z-50 bg-nexusGreen text-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo y Nombre de Empresa -->
             <a href="#" class="flex items-center space-x-3 group">
                 <div class="w-10 h-10 rounded-full bg-nexusMint flex items-center justify-center text-nexusGreen font-bold text-xl shadow-inner group-hover:scale-105 transition-transform">
                     🌱
@@ -49,7 +52,6 @@
                 </div>
             </a>
 
-            <!-- Navegación de Escritorio -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <a href="#inicio" class="hover:text-nexusMint transition-colors">Inicio</a>
                 <a href="#innovacion" class="hover:text-nexusMint transition-colors">Innovación</a>
@@ -58,7 +60,6 @@
                 <a href="#contacto" class="bg-nexusMint text-nexusGreen px-4 py-2 rounded-lg font-semibold hover:bg-white transition-all shadow-sm">Contacto</a>
             </nav>
 
-            <!-- Botón Menú Móvil -->
             <button id="menu-btn" class="md:hidden text-nexusMint focus:outline-none p-2 rounded-lg hover:bg-nexusGreen/80 transition-colors" aria-label="Abrir menú">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -66,7 +67,6 @@
             </button>
         </div>
 
-        <!-- Menú Desplegable Móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-nexusGreen border-t border-nexusGreen/40 px-4 pt-2 pb-4 space-y-2">
             <a href="#inicio" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Inicio</a>
             <a href="#innovacion" class="block py-2 px-3 rounded hover:bg-nexusGreen/70 transition-colors">Innovación</a>
@@ -76,9 +76,7 @@
         </div>
     </header>
 
-    <!-- Cuerpo (Home / Página de inicio) -->
     <main class="flex-grow">
-        
         <!-- Sección Hero -->
         <section id="inicio" class="relative bg-gradient-to-b from-nexusGreen to-[#133124] text-white py-20 lg:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
             <div class="max-w-4xl mx-auto relative z-10">
@@ -100,11 +98,10 @@
                     </a>
                 </div>
             </div>
-            <!-- Elemento decorativo sutil de fondo -->
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d8f3dc_1px,transparent_1px)] [background-size:16px_16px]"></div>
         </section>
 
-        <!-- Sección de Innovación (Multimedia: Video simulado y galería) -->
+        <!-- Sección de Innovación -->
         <section id="innovacion" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold text-nexusGreen mb-4">La Innovación Detrás de NexusTerra</h2>
@@ -112,11 +109,8 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Tarjeta de Video Incrustado / Reproductor simulado de alta calidad -->
                 <div class="bg-nexusGreen rounded-2xl overflow-hidden shadow-xl aspect-video relative flex flex-col items-center justify-center p-6 text-center group">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                    <!-- Simulación de reproductor -->
                     <div class="relative z-10 flex flex-col items-center">
                         <div class="w-16 h-16 bg-nexusMint rounded-full flex items-center justify-center text-nexusGreen text-2xl shadow-lg mb-4 cursor-pointer hover:scale-110 transition-transform">
                             ▶
@@ -126,7 +120,6 @@
                     </div>
                 </div>
 
-                <!-- Galería de Imágenes Limpias -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
                         <div class="rounded-xl overflow-hidden shadow-md h-48 bg-nexusMint/20 border border-nexusMint/30 flex items-center justify-center relative">
@@ -145,11 +138,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Sección de Características del Proyecto Final -->
+        <!-- Sección de Proyectos -->
         <section id="proyectos" class="bg-nexusMint/30 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -159,12 +151,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Tarjeta 1 -->
                     <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                                📡
-                            </div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">📡</div>
                             <h3 class="text-xl font-bold text-nexusGreen mb-3">Sensores IoT Autónomos</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">
                                 Red de nodos autónomos que miden humedad del sustrato, radiación UV, temperatura ambiente y concentración de nutrientes en tiempo real cada 60 segundos.
@@ -175,12 +164,9 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2 -->
                     <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                                🧠
-                            </div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">🧠</div>
                             <h3 class="text-xl font-bold text-nexusGreen mb-3">Algoritmos Predictivos IA</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">
                                 Modelos de redes neuronales entrenados para anticipar olas de calor, requerimientos hídricos específicos por variedad y prevenir plagas de manera biológica.
@@ -191,12 +177,9 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3 -->
                     <div class="bg-white p-8 rounded-2xl shadow-md border border-nexusMint/50 hover:shadow-xl transition-shadow flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                                🏙️
-                            </div>
+                            <div class="w-12 h-12 bg-nexusGreen text-nexusMint rounded-xl flex items-center justify-center text-xl font-bold mb-6">🏙️</div>
                             <h3 class="text-xl font-bold text-nexusGreen mb-3">Impacto Regenerativo Urbano</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">
                                 Mitigación del efecto "isla de calor" en las ciudades, secuestro activo de carbono y creación de corredores ecológicos polinizadores en azoteas desaprovechadas.
@@ -210,7 +193,7 @@
             </div>
         </section>
 
-        <!-- Sección de Tecnología e Infraestructura -->
+        <!-- Sección de Tecnología -->
         <section id="tecnologia" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="bg-nexusGreen text-white rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl">
                 <div class="lg:w-1/2">
@@ -278,15 +261,13 @@
                     Enviar Mensaje
                 </button>
             </form>
-            <!-- Cuadro de mensaje personalizado sin usar alert() -->
             <div id="form-success" class="hidden mt-4 p-4 bg-nexusMint text-nexusGreen rounded-xl text-center font-medium shadow-sm">
                 ¡Gracias por contactar a NexusTerra! Nos pondremos en contacto contigo muy pronto.
             </div>
         </section>
-
     </main>
 
-    <!-- Pie de Página (Footer) -->
+    <!-- Footer -->
     <footer class="bg-nexusGreen text-white border-t border-nexusGreen/50 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div class="space-y-4">
@@ -323,12 +304,11 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-gray-400">
-            Diseñado con un enfoque innovador, responsivo y de triple paleta de color para servidores en la nube.
+            Diseñado con un enfoque innovador, responsivo y PWA autónomo.
         </div>
     </footer>
 
     <script>
-        // Funcionalidad para el menú móvil responsivo
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -336,7 +316,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Cerrar menú móvil al hacer click en un enlace
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -344,7 +323,6 @@
             });
         });
 
-        // Simulación de envío de formulario sin usar alert()
         function handleContact(event) {
             event.preventDefault();
             const successBox = document.getElementById('form-success');
@@ -357,18 +335,12 @@
         
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./service-worker.js')
+                navigator.serviceWorker.register('./serviceworker.js')
                     .then(registration => {
-                        console.log(
-                            'NexusTerra Service Worker registrado:',
-                            registration.scope
-                        );
+                        console.log('NexusTerra Service Worker registrado:', registration.scope);
                     })
                     .catch(error => {
-                        console.error(
-                            'Error al registrar el Service Worker:',
-                            error
-                        );
+                        console.error('Error al registrar el Service Worker:', error);
                     });
             });
         }
